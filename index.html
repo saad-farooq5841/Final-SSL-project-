@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <img src="images.jpg" alt="My Profile Picture" class="profile-img" />
+    <h1 id="name">Saad Farooq</h1>
+    <p class="intro">Hi! I'm a web developer passionate about building clean and user-friendly websites. Let's create something amazing together!</p>
+    <p>This is my new paragraph</p>
+    <button onclick="toggleContactInfo()">Say Hello</button>
+    <p id="greeting"></p>
+
+    <div id="contactInfo" style="display: none;">
+      <h2>Contact Me</h2>
+      <p>Email:shuja ul hassan@gmail.com</p>
+      <p>Phone: +929803 456 7890</p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">Your LinkedIn Profile</a></p>
+      <p>GitHub: <a href="https://github.com/yourusername" target="_blank">Your GitHub Profile</a></p>
+    </div>
+  </div>
+
+  <script>
+    function toggleContactInfo() {
+      const contactInfoDiv = document.getElementById('contactInfo');
+      // You'll need to decide if you want both buttons to control the same contact info or separate ones.
+      // If separate, give the second contact info div a unique ID like 'contactInfo2' and target it here.
+      // For this example, I'll assume you want to control the first one, or you can make a more generic function.
+
+      if (contactInfoDiv.style.display === 'none') {
+        contactInfoDiv.style.display = 'block'; // Or 'flex', 'grid', depending on your styling
+      } else {
+        contactInfoDiv.style.display = 'none';
+      }
+
+      // If you have a second contact info div and want each button to control its own:
+      // const contactInfoDiv2 = document.getElementById('contactInfo2');
+      // if (contactInfoDiv2.style.display === 'none') {
+      //   contactInfoDiv2.style.display = 'block';
+      // } else {
+      //   contactInfoDiv2.style.display = 'none';
+      // }
+    }
+  </script>
+  </body>
+</html>
